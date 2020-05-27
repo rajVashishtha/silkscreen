@@ -1,0 +1,53 @@
+.footer{
+    display: flex;
+     justify-content: center;
+    flex-direction: column;
+    background-color: #B1B5B1;
+    width: 100%;
+    margin-top: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+}
+.footer .footer_center{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.footer_center .footer_card{
+    padding-left: 2rem;
+    padding-right: 2rem;
+/*    height: 30rem;*/
+}
+.footer_card p{
+    line-height: 1.5rem;
+}
+.footer_card a{
+    display: block;
+    padding-top: .5rem;
+    padding-bottom: .5  rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer_center .footer_card a:hover{
+    text-decoration: underline;
+}
+.footer_2 a{
+    cursor: inherit;
+    text-decoration: none;
+    color: black;
+}
+.footer_2 .footer_card a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer_2 .footer_card #email_us:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer_card > h2, .footer_card > h4{
+    color: white;
+}

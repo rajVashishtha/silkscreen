@@ -1,0 +1,45 @@
+
+.main_body{
+    width: 55rem;
+    margin-top: 10rem;
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;  
+}
+.main_body > h1{
+    padding-top: 1.3rem;
+    text-align: center;
+    color: #878787;
+    line-height: .1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cards_div{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+
+
+.view_more_div{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+}
+.view_more_div button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 1rem;
+    padding: 1rem 4rem 1rem 4rem;
+    background-color: #f3d250  ;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
