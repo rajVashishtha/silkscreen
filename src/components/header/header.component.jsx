@@ -3,38 +3,51 @@ import $ from 'jquery'
 import './header.style.css'
 import Logo from '../../images/SILKSCREENLOGO.png'
 import shopping_cart from '../../images/shoping.svg'
+export const displayModal = (event) =>{
+    var {target} = event
+    
+    if(target.id === "myBtn"){
+        $(".modal-header > h2").text("Why Us ?")
+        $("#modal2").css("display", "none")
+        $("#modal1").css("display","block")
+       
+    }
+    else{
+        $(".modal-header > h2").text("Contact Us")
+        $("#modal2").css("display", "block")
+        $("#modal1").css("display","none")
+    }
+    var temp = $("#myModal").css("display")
+
+    document.getElementById("myModal").style.display = (temp === "none") ? "block" : "none"
+};
 
 class MyHeader extends React.Component{
     state = {
         signmodal : false
     }
-    constructor(props){
-        super(props);
-        
+   
+    
+    
+    render(){
         this.displayModal = (event) =>{
             var {target} = event
-            
-            if(target.id === "myBtn2-1"){
-                $(".modal-header > h2").text("Contact Us")
-                $("#modal2").css("display", "block")
-                $("#modal1").css("display","none")
-            }
-            else{
+            console.log(target.id)
+            if(target.id === "myBtn"){
                 $(".modal-header > h2").text("Why Us ?")
                 $("#modal2").css("display", "none")
                 $("#modal1").css("display","block")
+                
+            }
+            else{
+                $(".modal-header > h2").text("Contact Us")
+                $("#modal2").css("display", "block")
+                $("#modal1").css("display","none")
             }
             var temp = $("#myModal").css("display")
     
             document.getElementById("myModal").style.display = (temp === "none") ? "block" : "none"
         };
-        this.displayModal = this.displayModal.bind(this)
-
-    }
-    
-    
-    
-    render(){
         this.changeSign = () => {
             this.setState((prevState) => {
                 return {signmodal : prevState.signmodal ? false : true}
@@ -48,7 +61,7 @@ class MyHeader extends React.Component{
                 <img src={Logo} alt="figure" />
             </div>
             <div className="link_div">
-                <button style={{border:"none"}} id="myBtn2-1" onClick={this.displayModal}>Contact Us</button>
+                <button style={{border:"none"}} onClick={this.displayModal}>Contact Us</button>
                 <button onClick={this.changeSign}>Sign In</button>
                 {
                     this.state.signmodal ? (
@@ -160,11 +173,10 @@ class MyHeader extends React.Component{
                     </div>
                 </div>
                 
-                <div className="navlink" id="myBtn" onClick={this.displayModal}>
-                    <h3>Why Us ?</h3>
+                <div className="navlink" onClick={this.displayModal}>
+                    <h3 id="myBtn">Why Us ?</h3>
                 </div>
-                
-
+        
 
             </div>
         </div>

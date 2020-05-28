@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.style.css'
+import {displayModal} from '../header/header.component'
 
 
 const Footer = () =>{
@@ -62,7 +63,7 @@ const Footer = () =>{
                      <div className="footer_card">
                         <h4>About us</h4>
                         <br />
-                        <a href="#/">Contact</a>
+                        <a href={displayModal} onClick={displayModal} id="footer_contact">Contact</a>
                         <a href="#/">Location</a>
                         
                         

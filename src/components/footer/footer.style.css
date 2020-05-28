@@ -51,3 +51,9 @@
 .footer_card > h2, .footer_card > h4{
     color: white;
 }
+#modal1{
+    display: none;
+}
+#modal2{
+    display: block;
+}
