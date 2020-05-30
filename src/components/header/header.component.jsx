@@ -3,6 +3,7 @@ import $ from 'jquery'
 import './header.style.css'
 import Logo from '../../images/SILKSCREENLOGO.png'
 import shopping_cart from '../../images/shoping.svg'
+import SignUpAndSignIn from '../signup-signin/signup-signin.component'
 export const displayModal = (event) =>{
     var {target} = event
     
@@ -63,38 +64,11 @@ class MyHeader extends React.Component{
             <div className="link_div">
                 <button style={{border:"none"}} onClick={this.displayModal}>Contact Us</button>
                 <button onClick={this.changeSign}>Sign In</button>
-                {
-                    this.state.signmodal ? (
-                        <div className="modal">
-                    <div className="modal-content">
-                        <span className="close" style={{marginRight: "2rem"}} onClick={this.changeSign}>&times;</span>
-                        <div className="modal-body">
-                            <div className="wrap">
-                                <form action="#">
-                                    <fieldset>
-                                        <legend><h3>Sign Up</h3></legend>
-                                        <input type="text" name="yourName" placeholder="Your Name"/>
-                                        <input type="text" name="email" placeholder="Email"/>
-                                        <input type="password" name="psw" placeholder="Password" style={{marginLeft:"30%"}} />
-                                        <form action="#">
-                                        <h2 id="h2">Or sign up with</h2>
-                                        <button href="#" id="google"><i className="fab fa-google"></i>&nbsp;Google</button>
-                                        </form>
-                                        <hr style={{width : "80%" }} />
-                                        <input type="submit"  value="Submit" />
-                                    </fieldset>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    ) : (null)
-                }
                 <button style={{paddingBottom : "0.9rem"}}><img width="150%" height="150%" src={shopping_cart} alt="figure" /></button>
                 <div id="myModal" className="modal-2">
                       <div className="modal-content-2">
                         <div className="modal-header">
-                          <span className="close" onClick={this.displayModal}>&times;</span>
+                          <span className="close"  onClick={this.displayModal}>&times;</span>
                           <h2 style={{marginLeft:"2rem"}}>Why Us ?</h2>
                         </div>
                           <div id="modal1">
@@ -136,6 +110,18 @@ class MyHeader extends React.Component{
                       </div>
                     </div>
             </div>
+            {
+                    this.state.signmodal ? (
+                        <div className="modal">
+                    <div className="modal-content">
+                        <span className="close" style={{marginRight: "2rem" ,color:"black"}} onClick={this.changeSign}>&times;</span>
+                        <div className="modal-body">
+                           <SignUpAndSignIn />
+                        </div>
+                    </div>
+                </div>
+                    ) : (null)
+                }
         </div>
 
 
