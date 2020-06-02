@@ -2,6 +2,7 @@ import React from 'react';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
+import {withRouter} from 'react-router-dom'
 
 
 import './sign-up.styles.scss';
@@ -23,7 +24,7 @@ class SignUp extends React.Component {
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
-
+    const {ChangeSign} = this.props
     if (password !== confirmPassword) {
       alert("passwords don't match");
       return;
@@ -31,14 +32,14 @@ class SignUp extends React.Component {
     console.log(displayName, email)
 
     try {
-     
-
       this.setState({
         displayName: '',
         email: '',
         password: '',
         confirmPassword: ''
       });
+      this.props.history.push(this.props.location.pathname)
+      ChangeSign()
     } catch (error) {
       console.error(error);
     }
@@ -96,4 +97,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default withRouter(SignUp);

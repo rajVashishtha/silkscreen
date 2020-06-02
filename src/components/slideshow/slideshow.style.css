@@ -32,22 +32,21 @@
     
 }
 .slideshow .slidetext > button{
-    margin-left: 1.2rem;
+     margin-left: 1.2rem;
     height: 3.5rem;
     margin-right: 3rem;
     padding-left: 2%;
     padding-right: 2%;
     width: 25%;
     border-radius: 1rem;
-    border: none;
-    background-color: #f2d350;
-    border: 1px solid #f3d450;
-    color: white;
-    font-weight: bolder;
-    line-height: .5rem;
-    font-size: 1.5rem;
     cursor: pointer;
-    outline: none;
+   background-color: #0F4B88;
+  color: #5cdb95;
+  border: none;
+  font-weight:900;
+  font-size: 1.2rem;
+  border-radius : 1.3rem;
+  outline:none;
 }
 @media only screen and (max-width: 600px){
     .slideshow .slidetext{

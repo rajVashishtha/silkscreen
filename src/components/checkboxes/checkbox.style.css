@@ -203,6 +203,9 @@ ul.input-list li {
     background: none;
     display: inline-block;
 }
+ul.input-list{
+  background-color: #5CDB95 !important;
+}
 .panel {
   margin: 20px 0;
 }

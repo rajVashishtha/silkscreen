@@ -1,7 +1,6 @@
 import React from 'react'
 import './slideshow.style.css'
 
-
 class SlideShow extends React.Component{
     constructor(props){
         super(props);
@@ -64,7 +63,7 @@ class SlideShow extends React.Component{
       }
     render(){
         return(
-            <div className="slideshow" style={{backgroundImage : `url(${this.state.current.backUrl})`}}>
+            <div className="slideshow" >
                 <img className="slideshow_image" id="slideshow" alt="figure" src={this.state.current.url} />
                 <div className="slidetext">
                     <h1>{this.state.current.text}</h1><button>{this.state.current.buttonText}</button>

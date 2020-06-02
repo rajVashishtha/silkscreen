@@ -2,6 +2,8 @@ import React from 'react';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
+import {withRouter} from 'react-router-dom';
+
 
 
 
@@ -19,10 +21,17 @@ class SignIn extends React.Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-
+    const {ChangeSign} = this.props
     const { email, password } = this.state;
     console.log(email, password)
-
+    this.props.history.push(this.props.location.pathname)
+    this.setState({
+      email :'',
+      password:''
+    })
+    localStorage.setItem('user',"Raj Vashishtha")
+    ChangeSign()
+    // MyHeader.setState({signmodal : false})
     
   };
 
@@ -57,9 +66,9 @@ class SignIn extends React.Component {
           />
           <div className='buttons'>
             <CustomButton type='submit'> Sign in </CustomButton>
-            <CustomButton  isGoogleSignIn>
+            {/* <CustomButton  isGoogleSignIn>
               Google
-            </CustomButton>
+            </CustomButton> */}
           </div>
         </form>
       </div>
@@ -67,4 +76,4 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+export default withRouter(SignIn);

@@ -2,7 +2,7 @@
 .header{
     display:flex;
     justify-content: space-around;
-    background-color: #f3d250;
+    background-color: #5CDB95;
 /*
     padding-top: .8rem;
     padding-bottom: .8rem;
@@ -97,8 +97,9 @@
   }
   
   .modal-body {
-      background-color:rgb(243, 217, 115);
-      padding: 2px 9px;}
+      background-color:white;
+      padding: 2px 9px;
+    }
 
 
 

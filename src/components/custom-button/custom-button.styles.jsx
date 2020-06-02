@@ -1,14 +1,18 @@
 import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
-  background-color: black;
-  color: white;
+  background-color: #0F4B88;
+  color: #5cdb95;
   border: none;
-
+  font-weight:900;
+  border-radius : 1.3rem;
+  outline:none; 
+  box-shadow : 1px 2px 5px 5px #5cdb95;
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: #5cdb95;
+    color: #0F4B88;
     border: 1px solid black;
+    box-shadow : 1px 2px 5px 5px #0f4b88;
   }
 `;
 

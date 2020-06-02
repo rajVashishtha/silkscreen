@@ -24,12 +24,22 @@ export const displayModal = (event) =>{
 };
 
 class MyHeader extends React.Component{
-    state = {
-        signmodal : false
+    constructor(props){
+        super(props);
+        this.state = {
+            signmodal : false,
+            user:null
+        }
+    }
+    componentDidMount(){
+        console.log(localStorage.getItem('user'))
+        if(localStorage.getItem('user') !== null){
+            this.setState({
+                user: localStorage.getItem('user')
+            })
+        }
     }
    
-    
-    
     render(){
         this.displayModal = (event) =>{
             var {target} = event
@@ -51,7 +61,9 @@ class MyHeader extends React.Component{
         };
         this.changeSign = () => {
             this.setState((prevState) => {
-                return {signmodal : prevState.signmodal ? false : true}
+                return {signmodal : prevState.signmodal ? false : true,
+                user: localStorage.getItem('user')
+                }
             })
         }
         
@@ -63,7 +75,9 @@ class MyHeader extends React.Component{
             </div>
             <div className="link_div">
                 <button style={{border:"none"}} onClick={this.displayModal}>Contact Us</button>
-                <button onClick={this.changeSign}>Sign In</button>
+                {
+                    this.state.user == null ? (<button onClick={this.changeSign}>Sign In</button>) : (<button>{this.state.user}</button>)
+                }
                 <button style={{paddingBottom : "0.9rem"}}><img width="150%" height="150%" src={shopping_cart} alt="figure" /></button>
                 <div id="myModal" className="modal-2">
                       <div className="modal-content-2">
@@ -116,7 +130,7 @@ class MyHeader extends React.Component{
                     <div className="modal-content">
                         <span className="close" style={{marginRight: "2rem" ,color:"black"}} onClick={this.changeSign}>&times;</span>
                         <div className="modal-body">
-                           <SignUpAndSignIn />
+                           <SignUpAndSignIn ChangeSign={this.changeSign} />
                         </div>
                     </div>
                 </div>
