@@ -39,6 +39,12 @@ class MyHeader extends React.Component{
             })
         }
     }
+    logOut = () =>{
+        localStorage.removeItem('user')
+        this.setState({
+            user:null
+        })
+    }
    
     render(){
         this.displayModal = (event) =>{
@@ -76,7 +82,7 @@ class MyHeader extends React.Component{
             <div className="link_div">
                 <button style={{border:"none"}} onClick={this.displayModal}>Contact Us</button>
                 {
-                    this.state.user == null ? (<button onClick={this.changeSign}>Sign In</button>) : (<button>{this.state.user}</button>)
+                    this.state.user == null ? (<button onClick={this.changeSign}>Sign In</button>) : (<button onClick={this.logOut}>{this.state.user}</button>)
                 }
                 <button style={{paddingBottom : "0.9rem"}}><img width="150%" height="150%" src={shopping_cart} alt="figure" /></button>
                 <div id="myModal" className="modal-2">

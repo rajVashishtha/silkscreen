@@ -2,7 +2,7 @@
 .header{
     display:flex;
     justify-content: space-around;
-    background-color: #5CDB95;
+    background-color: #80BAF5;
 /*
     padding-top: .8rem;
     padding-bottom: .8rem;
@@ -92,13 +92,13 @@
   .modal-header {
     padding: 2px 16px;
        padding-top: .5rem;
-    background-color: #F0CB39;
+    background-color: #80BAF5;
     color: white;
   }
   
   .modal-body {
       background-color:white;
-      padding: 2px 9px;
+      /* padding: 2px 9px; */
     }
 
 
@@ -141,11 +141,11 @@
     to {top:0; opacity:1}
   }
   ul {
-    background: #f3d250;
+    background: #CCD1D6;
     padding: 1.2rem;
   }
   ul li {
-    background: #FADF73;
+    background: #E5E8EC;
     padding: .6rem;
     margin-left: 2.6rem;
       font-family: 'Sen', sans-serif;

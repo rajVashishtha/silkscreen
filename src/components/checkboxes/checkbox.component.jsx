@@ -1,5 +1,6 @@
 import React from 'react'
 import './checkbox.style.css'
+import Button from '@material-ui/core/Button'
 
 const CheckBox = () =>{
 
@@ -49,7 +50,7 @@ const CheckBox = () =>{
                     <label htmlFor="checkbox6">Holidays & travel</label>
                 </div>
             </li>
-            <button>Submit</button>
+            <Button variant="contained" color="primary">Submit</Button>
         </ul>
         
         </div>

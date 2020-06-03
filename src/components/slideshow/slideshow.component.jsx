@@ -1,5 +1,6 @@
 import React from 'react'
 import './slideshow.style.css'
+import Button from '@material-ui/core/Button'
 
 class SlideShow extends React.Component{
     constructor(props){
@@ -66,7 +67,7 @@ class SlideShow extends React.Component{
             <div className="slideshow" >
                 <img className="slideshow_image" id="slideshow" alt="figure" src={this.state.current.url} />
                 <div className="slidetext">
-                    <h1>{this.state.current.text}</h1><button>{this.state.current.buttonText}</button>
+                    <h1>{this.state.current.text}</h1><Button variant="contained" color="primary">{this.state.current.buttonText}</Button>
                 </div>
             </div>
         )

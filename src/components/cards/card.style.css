@@ -1,6 +1,6 @@
 
 .main_body{
-    width: 55rem;
+    width: 60rem;
     margin-top: 10rem;
     padding-top: 2rem;
     margin-left: auto;
@@ -36,10 +36,10 @@
     font-weight: bolder;
     margin-left: 1rem;
     padding: 1rem 4rem 1rem 4rem;
-    background-color: #0F4B88;
-  color: #5cdb95;
-    border: none;
-    outline: none;
+
+
+
+ 
     border-radius: 1rem;
     cursor: pointer;
 }

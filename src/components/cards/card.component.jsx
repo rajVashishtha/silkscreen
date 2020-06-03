@@ -2,6 +2,7 @@ import React from 'react'
 import './card.style.css'
 import OneCard from '../onecard/onecard.component'
 import $ from 'jquery'
+import Button from '@material-ui/core/Button'
 
 class Cards extends React.Component{
     constructor(props){
@@ -38,7 +39,7 @@ class Cards extends React.Component{
             ],
             banners_desc : [
                 "Whether you’re listing your business or promoting new products, adhesive banners are the best way to get attention.",
-                "Put your brand ahead of the competition not just every day but every night too.Let us help you.",
+                "Put your brand ahead of the competition not just every day but every night too.Let us help you and believe us that your work are in best hands.",
                 "Backlit Banners are a great way to showcase your graphics at night time.Let us help to make your Advertising come to life at night.",
                 "The standee banners are an important part of a marketing kit to make your presence felt amongst the prospective clients.Let us help you.",
                 "Want to attract mass audience towards an event,Let us help you out.You are just few steps away.",
@@ -83,7 +84,7 @@ class Cards extends React.Component{
                     }
                     <div style={{display: "flex", flexDirection : "column" , justifyContent: "center"}}>
                         <div className="view_more_div">
-                            <h2>Something Else ?</h2><button onClick={this.increaseQuantity}>View More</button> 
+                            <h2>Something Else ?</h2><Button variant="contained" color="primary"  onClick={this.increaseQuantity}>View More</Button>
                         </div>
                     </div>
                 </div>
