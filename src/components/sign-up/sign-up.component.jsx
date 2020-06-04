@@ -3,7 +3,7 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component';
 // import CustomButton from '../custom-button/custom-button.component';
 import {withRouter} from 'react-router-dom'
-import Button from'@material-ui/core/Button'
+import NewButton from'../material/button.component'
 
 
 import './sign-up.styles.scss';
@@ -91,7 +91,7 @@ class SignUp extends React.Component {
             label='Confirm Password'
             required
           />
-          <Button variant="outlined" color="primary" type="submit">Sign Up</Button>
+          <NewButton variant="outlined" type="submit">Sign Up</NewButton>
         </form>
       </div>
     );

@@ -2,7 +2,8 @@ import React from 'react'
 import './card.style.css'
 import OneCard from '../onecard/onecard.component'
 import $ from 'jquery'
-import Button from '@material-ui/core/Button'
+
+import NewButton from '../material/button.component'
 
 class Cards extends React.Component{
     constructor(props){
@@ -84,7 +85,7 @@ class Cards extends React.Component{
                     }
                     <div style={{display: "flex", flexDirection : "column" , justifyContent: "center"}}>
                         <div className="view_more_div">
-                            <h2>Something Else ?</h2><Button variant="contained" color="primary"  onClick={this.increaseQuantity}>View More</Button>
+                            <h2>Something Else ?</h2><NewButton variant="contained" onClick={this.increaseQuantity}>View More</NewButton>
                         </div>
                     </div>
                 </div>

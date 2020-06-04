@@ -3,7 +3,7 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component';
 // import CustomButton from '../custom-button/custom-button.component';
 import {withRouter} from 'react-router-dom';
-import Button from '@material-ui/core/Button'
+import NewButton from '../material/button.component'
 
 
 
@@ -70,7 +70,7 @@ class SignIn extends React.Component {
             {/* <CustomButton  isGoogleSignIn>
               Google
             </CustomButton> */}
-            <Button variant="outlined" color="primary" type="submit">Sign In</Button>
+            <NewButton variant="outlined"  type="submit">Sign In</NewButton>
           </div>
         </form>
       </div>

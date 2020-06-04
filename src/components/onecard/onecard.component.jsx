@@ -29,9 +29,10 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
+import NewButton from '../material/button.component'
 const removeHover = {
     "&:hover": {
         //you want this to be the same as the backgroundColor above
@@ -96,12 +97,13 @@ export default function OneCard({imageUrl,link, bannerName, bannerDesc}) {
       </CardActionArea>
       </MuiThemeProvider>
       <CardActions>
-        <Button size="small" color="primary" variant="outlined">
+        <NewButton size="small"  variant="outlined" >
           Add to Cart
-        </Button>
-        <Button size="small" color="primary" variant="outlined" style={{marginLeft:"1.5rem"}}>
+        </NewButton>
+        
+        <NewButton size="small" variant="outlined" marginleft="1.5rem">
           Learn More
-        </Button>
+        </NewButton>
       </CardActions>
     </Card>
   );

@@ -50,7 +50,7 @@ const Footer = () =>{
 
                 }} />
                 
-                <div className="footer_center footer_2">   
+                <div className="footer_center_2 footer_2">   
                      <div className="footer_card" style={{width: "25%"}}>
                         <h4>SilkScreen</h4>
                         <br />

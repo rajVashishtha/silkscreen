@@ -3,7 +3,9 @@ import $ from 'jquery'
 import './header.style.css'
 import Logo from '../../images/SILKSCREENLOGO.png'
 import shopping_cart from '../../images/shoping.svg'
+import TocIcon from '@material-ui/icons/Toc';
 import SignUpAndSignIn from '../signup-signin/signup-signin.component'
+import './header.util'
 export const displayModal = (event) =>{
     var {target} = event
     
@@ -44,6 +46,18 @@ class MyHeader extends React.Component{
         this.setState({
             user:null
         })
+    }
+    showNav = () => {
+        var x = $("#myTopnav");
+        if(x.css("display") === "none")
+        {
+            
+            x.css('display','flex')
+        }
+        else{
+            x.css('display','none')
+        }
+  
     }
    
     render(){
@@ -92,7 +106,7 @@ class MyHeader extends React.Component{
                           <h2 style={{marginLeft:"2rem"}}>Why Us ?</h2>
                         </div>
                           <div id="modal1">
-                        <div className="modal-body-2">
+                        <div className="modal-body-2" style={{backgroundColor:`hexToRgb("#D7E6FA")`}}>
                           <ul>
                             <li>
                               Eco Friendly
@@ -146,7 +160,7 @@ class MyHeader extends React.Component{
 
 
         <div className="navbar">
-            <div className="container">
+            <div className="container" id="myTopnav">
                 <div className="navlink">
                     <h3>Products</h3>
                     <div className="navlist">
@@ -178,13 +192,13 @@ class MyHeader extends React.Component{
                         <button><i className="far fa-envelope"></i>&nbsp; Email Us</button>
                     </div>
                 </div>
-                
                 <div className="navlink" onClick={this.displayModal}>
                     <h3 id="myBtn">Why Us ?</h3>
                 </div>
-        
-
             </div>
+            <div className="container icon" onClick={this.showNav}>
+                <TocIcon fontSize="large"  />
+                </div>
         </div>
     </div>
         )

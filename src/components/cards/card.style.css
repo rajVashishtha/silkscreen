@@ -36,10 +36,21 @@
     font-weight: bolder;
     margin-left: 1rem;
     padding: 1rem 4rem 1rem 4rem;
-
-
-
- 
-    border-radius: 1rem;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .main_body{
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .cards_div{
+      flex-direction: column wrap ;
+      justify-content: flex-start;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: flex-start;
+      margin-left: 10%;
+  }
 }

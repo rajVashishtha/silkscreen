@@ -4,4 +4,22 @@
     justify-content: space-between;
     margin: 30px auto;
   }
-  
+  @media screen and (max-width: 600px){
+    .sign-in-and-sign-up{
+      width: 400px;
+      flex-direction: column;
+      margin: 10px auto;
+      margin-bottom: 10px;
+    }
+    .hr{
+      margin-top: 60px;
+      margin-bottom: 60px;
+      display: block;
+      width: 95%;
+      height: 5px;
+      color: white;
+      border: none;
+      border-top: 2px solid #888888;
+      border-bottom: 2px solid #7AAFF7;
+    }
+  }  

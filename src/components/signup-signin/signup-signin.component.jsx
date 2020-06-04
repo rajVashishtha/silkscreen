@@ -7,7 +7,7 @@ const SignUpAndSignIn = ({ChangeSign}) =>{
     return(
         <div className='sign-in-and-sign-up'>
             <SignIn ChangeSign={ChangeSign} />
-            <hr />
+            <hr className="hr" />
             <SignUp ChangeSign={ChangeSign} />
         </div>
     )
