@@ -4,6 +4,8 @@ import FormInput from '../form-input/form-input.component';
 // import CustomButton from '../custom-button/custom-button.component';
 import {withRouter} from 'react-router-dom';
 import NewButton from '../material/button.component'
+import {connect} from 'react-redux'
+import {setCurrentUser}  from '../../redux/user/user-action'
 
 
 
@@ -19,20 +21,21 @@ class SignIn extends React.Component {
       password: ''
     };
   }
-
+   
   handleSubmit = async event => {
     event.preventDefault();
-    const {ChangeSign} = this.props
+    const {setCurrentUser} = this.props
     const { email, password } = this.state;
+    setCurrentUser({
+      email,
+      password
+    })
     console.log(email, password)
-    this.props.history.push(this.props.location.pathname)
+    this.props.history.push("/")
     this.setState({
       email :'',
       password:''
     })
-    localStorage.setItem('user',"Raj Vashishtha")
-    ChangeSign()
-    // MyHeader.setState({signmodal : false})
     
   };
 
@@ -76,6 +79,10 @@ class SignIn extends React.Component {
       </div>
     );
   }
-}
+};
 
-export default withRouter(SignIn);
+const mapDispatchToProps = dispatch =>({
+  setCurrentUser : user => dispatch(setCurrentUser(user))
+})
+
+export default connect(null, mapDispatchToProps)(withRouter(SignIn));

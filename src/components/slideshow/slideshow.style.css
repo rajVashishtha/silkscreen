@@ -8,6 +8,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
    
 }
 .slideshow_image{
@@ -26,6 +28,9 @@
     font-family: 'Comic Neue', cursive;
     line-height: .1rem;
     margin-top: 1.5rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .slideshow .slidetext > h1{
     width: 70%;

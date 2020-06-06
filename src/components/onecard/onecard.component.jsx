@@ -30,12 +30,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
+import {connect} from 'react-redux'
+import $ from 'jquery'
+
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
 import NewButton from '../material/button.component'
+import './onecard.style.css'
 const removeHover = {
     "&:hover": {
-        //you want this to be the same as the backgroundColor above
         backgroundColor:"transparent",
         cursor:'alias'
     }
@@ -49,7 +52,9 @@ media: {
   marginTop:'30'
 }
   };
-
+const showMsg= () =>{
+    $(".modal").fadeIn().fadeOut(1000)
+}
 const useStyles = makeStyles({
   root: {
     maxWidth: 400,
@@ -68,9 +73,9 @@ const theme = createMuiTheme({
     }
 })
 
-export default function OneCard({imageUrl,link, bannerName, bannerDesc}) {
+function OneCard({imageUrl,link, bannerName, bannerDesc, currentUser}) {
   const classes = useStyles();
-
+  console.log(currentUser)
   return (
     <Card className={classes.root}>
         <MuiThemeProvider theme={theme}>
@@ -97,15 +102,36 @@ export default function OneCard({imageUrl,link, bannerName, bannerDesc}) {
       </CardActionArea>
       </MuiThemeProvider>
       <CardActions>
-        <NewButton size="small"  variant="outlined" >
+        {
+          currentUser != null ? (<NewButton size="small"  variant="outlined" >
+          Add to Cart
+        </NewButton>) :
+        (
+          <NewButton size="small" variant="outlined"  className="disable" onClick={showMsg}>
           Add to Cart
         </NewButton>
+        )
+        }
         
         <NewButton size="small" variant="outlined" marginleft="1.5rem">
           Learn More
         </NewButton>
+        <div className="modal">
+          <div className="modal-content">
+            <div className="modal-body">
+                <h2>Please Login First</h2>
+            </div>
+
+          </div>
+
+        </div>
       </CardActions>
     </Card>
   );
 }
+
+const mapStateToProps = state =>({
+  currentUser : state.user.currentUser
+})
+export default connect(mapStateToProps)(OneCard);
 

@@ -72,7 +72,7 @@ class Cards extends React.Component{
         return(
             <div className="main_body">
                 <h1>Featured Products</h1>
-                <hr style={{marginTop: "4rem"}}></hr>
+                <hr style={{marginTop: "2rem"}}></hr>
                 <div className="cards_div">
                     {// eslint-disable-next-line
                           this.state.banners_list.map((item, index)=>{

@@ -1,10 +1,12 @@
 import React from 'react'
 import $ from 'jquery'
 import './header.style.css'
-import Logo from '../../images/SILKSCREENLOGO.png'
+import Logo from '../../images/SILKSCREEN LOGO1.jpg'
 import shopping_cart from '../../images/shoping.svg'
 import TocIcon from '@material-ui/icons/Toc';
-import SignUpAndSignIn from '../signup-signin/signup-signin.component'
+import {Link } from 'react-router-dom'
+import {connect}  from 'react-redux'
+import {setCurrentUser} from '../../redux/user/user-action'
 import './header.util'
 export const displayModal = (event) =>{
     var {target} = event
@@ -41,12 +43,11 @@ class MyHeader extends React.Component{
             })
         }
     }
-    logOut = () =>{
-        localStorage.removeItem('user')
-        this.setState({
-            user:null
-        })
+    signOut = () =>{
+        const {setCurrentUser} = this.props;
+        setCurrentUser(null)
     }
+    
     showNav = () => {
         var x = $("#myTopnav");
         if(x.css("display") === "none")
@@ -61,6 +62,7 @@ class MyHeader extends React.Component{
     }
    
     render(){
+        const {currentUser} = this.props
         this.displayModal = (event) =>{
             var {target} = event
             console.log(target.id)
@@ -90,13 +92,16 @@ class MyHeader extends React.Component{
         return(
     <div>
         <div className="header">
+            <Link to="/">
             <div className="logo_div">
                 <img src={Logo} alt="figure" />
             </div>
+            </Link>
             <div className="link_div">
                 <button style={{border:"none"}} onClick={this.displayModal}>Contact Us</button>
                 {
-                    this.state.user == null ? (<button onClick={this.changeSign}>Sign In</button>) : (<button onClick={this.logOut}>{this.state.user}</button>)
+                    currentUser== null ? (<Link as="button" to="/signin"><button>Sign In</button></Link>) :
+                    (<button onClick={this.signOut}>Sign Out</button>)
                 }
                 <button style={{paddingBottom : "0.9rem"}}><img width="150%" height="150%" src={shopping_cart} alt="figure" /></button>
                 <div id="myModal" className="modal-2">
@@ -144,18 +149,6 @@ class MyHeader extends React.Component{
                       </div>
                     </div>
             </div>
-            {
-                    this.state.signmodal ? (
-                        <div className="modal">
-                    <div className="modal-content">
-                        <span className="close" style={{marginRight: "2rem" ,color:"black"}} onClick={this.changeSign}>&times;</span>
-                        <div className="modal-body">
-                           <SignUpAndSignIn ChangeSign={this.changeSign} />
-                        </div>
-                    </div>
-                </div>
-                    ) : (null)
-                }
         </div>
 
 
@@ -203,6 +196,13 @@ class MyHeader extends React.Component{
     </div>
         )
     }
-}
+};
 
-export default MyHeader
+const mapStateToProps = state =>({
+    currentUser : state.user.currentUser
+})
+const mapDispatchToProps = dispatch =>({
+    setCurrentUser : user => dispatch(setCurrentUser(user))
+  })
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyHeader)

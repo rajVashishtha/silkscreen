@@ -11,10 +11,12 @@ const Footer = () =>{
                      color:"white",
                      textAlign :"center",
                      fontSize : "3rem",
-
+                    
                  }}>Why print here ?</h2>
                 <div className="footer_center">
-                     <div className="footer_card">
+                     <div className="footer_card" style={{
+                         marginTop:"0rem",
+                     }}>
                         <h2>We are always before time</h2>
                          <br />
                         <p>We keep our work at highest priority and deliver it at an unconditionally pace with guareented best quality.</p>
@@ -63,7 +65,7 @@ const Footer = () =>{
                      <div className="footer_card">
                         <h4>About us</h4>
                         <br />
-                        <a href={displayModal} onClick={displayModal} id="footer_contact">Contact</a>
+                        <a href="#/" onClick={displayModal} id="footer_contact">Contact</a>
                         <a href="#/">Location</a>
                         
                         

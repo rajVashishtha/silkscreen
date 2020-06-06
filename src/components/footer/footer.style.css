@@ -5,13 +5,14 @@
     background-color: #B1B5B1;
     width: 100%;
     margin-top: 0;
+    padding-top: 0rem;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
+    height: auto;
 }
 .footer .footer_center{
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -20,13 +21,13 @@
 .footer .footer_center_2{
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
 }
 .footer_center .footer_card{
+    
     padding-left: 2rem;
     padding-right: 2rem;
 /*    height: 30rem;*/
@@ -37,8 +38,8 @@
 }
 .footer_card a{
     display: block;
-    padding-top: .5rem;
-    padding-bottom: .5  rem;
+    /* padding-top: .5rem; */
+    /* padding-bottom: .5  rem; */
     text-decoration: none;
     cursor: pointer;
 }
