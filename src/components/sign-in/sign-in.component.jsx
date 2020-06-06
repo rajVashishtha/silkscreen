@@ -1,11 +1,9 @@
 import React from 'react';
-
 import FormInput from '../form-input/form-input.component';
-// import CustomButton from '../custom-button/custom-button.component';
 import {withRouter} from 'react-router-dom';
-import NewButton from '../material/button.component'
-import {connect} from 'react-redux'
-import {setCurrentUser}  from '../../redux/user/user-action'
+import NewButton from '../material/button.component';
+import {connect} from 'react-redux';
+import {setCurrentUser}  from '../../redux/user/user-action';
 
 
 
@@ -36,7 +34,6 @@ class SignIn extends React.Component {
       email :'',
       password:''
     })
-    
   };
 
   handleChange = event => {
@@ -69,10 +66,6 @@ class SignIn extends React.Component {
             required
           />
           <div className='buttons'>
-            {/* <CustomButton type='submit'> Sign in </CustomButton> */}
-            {/* <CustomButton  isGoogleSignIn>
-              Google
-            </CustomButton> */}
             <NewButton variant="outlined"  type="submit">Sign In</NewButton>
           </div>
         </form>
