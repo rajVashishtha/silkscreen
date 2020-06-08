@@ -30,13 +30,13 @@ class Cards extends React.Component{
                 'images.jpg'
             ],
             links :[
-                'product/?p=adhesive_banner',
-                'product/?p=advertising_banner',
-                'product/?p=backlit_banner',
-                'product/?p=banner_with_standee',
-                'product/?p=event_banner',
-                'product/?p=tradeshow_banner',
-                'product/?p=oneway_vision_banner'
+                'products/adhesive_banner',
+                'products/advertising_banner',
+                'products/backlit_banner',
+                'products/banner_with_standee',
+                'products/event_banner',
+                'products/tradeshow_banner',
+                'products/oneway_vision_banner'
             ],
             banners_desc : [
                 "Whether you’re listing your business or promoting new products, adhesive banners are the best way to get attention.",

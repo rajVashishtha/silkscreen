@@ -30,6 +30,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
+import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import $ from 'jquery'
 
@@ -73,9 +74,8 @@ const theme = createMuiTheme({
     }
 })
 
-function OneCard({imageUrl,link, bannerName, bannerDesc, currentUser}) {
+function OneCard({imageUrl,link, bannerName, bannerDesc, currentUser, match, history}) {
   const classes = useStyles();
-  console.log(currentUser)
   return (
     <Card className={classes.root}>
         <MuiThemeProvider theme={theme}>
@@ -113,7 +113,7 @@ function OneCard({imageUrl,link, bannerName, bannerDesc, currentUser}) {
         )
         }
         
-        <NewButton size="small" variant="outlined" marginleft="1.5rem">
+        <NewButton size="small" variant="outlined" marginleft="1.5rem" onClick={()=>history.push(`${match.url}${link}`)}>
           Learn More
         </NewButton>
         <div className="modal">
@@ -133,5 +133,5 @@ function OneCard({imageUrl,link, bannerName, bannerDesc, currentUser}) {
 const mapStateToProps = state =>({
   currentUser : state.user.currentUser
 })
-export default connect(mapStateToProps)(OneCard);
+export default withRouter(connect(mapStateToProps)(OneCard));
 

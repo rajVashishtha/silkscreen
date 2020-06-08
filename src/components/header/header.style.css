@@ -16,12 +16,11 @@
     vertical-align: middle;
 }
 .logo_div img{
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 50%;
     margin-top: 10px;
     margin-bottom: 0px;
-    max-width: 20rem;
-    align-items: flex-end;
+    max-width: 25rem;
 }
 .link_div{
     display: flex;

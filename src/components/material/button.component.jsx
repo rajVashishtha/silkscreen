@@ -1,12 +1,6 @@
 import Button from '@material-ui/core/Button'
 import React from 'react'
-import { withStyles } from '@material-ui/core';
-
-const styles ={
-    disabled: {
-        cursor: 'not-allowed'
-    }
-};
+// import { withStyles } from '@material-ui/core';
 
 
 const NewButton = ({children, ...props}) =>{
@@ -24,11 +18,8 @@ const NewButton = ({children, ...props}) =>{
     return(
         <Button style={style} {...props}
         disabled={disabled}
-        classes={{
-            disabled: styles.disabled
-        }}
         variant={variant}
         >{children}</Button>
     )
 }
-export default withStyles(styles)(NewButton);
+export default NewButton;

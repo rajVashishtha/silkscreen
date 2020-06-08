@@ -1,7 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
 import './header.style.css'
-import Logo from '../../images/SILKSCREEN LOGO1.jpg'
+import Logo from '../../images/SILKSCREENLOGO2.png'
 import shopping_cart from '../../images/shoping.svg'
 import TocIcon from '@material-ui/icons/Toc';
 import {Link } from 'react-router-dom'
@@ -36,12 +36,7 @@ class MyHeader extends React.Component{
         }
     }
     componentDidMount(){
-        console.log(localStorage.getItem('user'))
-        if(localStorage.getItem('user') !== null){
-            this.setState({
-                user: localStorage.getItem('user')
-            })
-        }
+        
     }
     signOut = () =>{
         const {setCurrentUser} = this.props;
@@ -157,7 +152,9 @@ class MyHeader extends React.Component{
                 <div className="navlink">
                     <h3>Products</h3>
                     <div className="navlist">
-                        <button>Adhesive Banners</button>
+                        <Link to="/products/adhesive_banner" style={{
+                            textDecoration :"none"
+                        }}><button>Adhesive Banners</button></Link>
                         <button>Advertising Banners</button>
                         <button>Banners with Standee</button>
                         <button>Backlit Banners</button>
@@ -187,6 +184,9 @@ class MyHeader extends React.Component{
                 </div>
                 <div className="navlink" onClick={this.displayModal}>
                     <h3 id="myBtn">Why Us ?</h3>
+                </div>
+                <div className="navlink" >
+                    <h3 id="myBtn">Quotes</h3>
                 </div>
             </div>
             <div className="container icon" onClick={this.showNav}>

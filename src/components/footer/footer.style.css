@@ -9,11 +9,13 @@
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
     height: auto;
+    margin-top: 0.5rem;
+    padding-bottom: .5rem;
 }
 .footer .footer_center{
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 88%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -21,7 +23,7 @@
 .footer .footer_center_2{
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -31,6 +33,12 @@
     padding-left: 2rem;
     padding-right: 2rem;
 /*    height: 30rem;*/
+}
+.footer h2{
+    line-height: 0rem;
+}
+.footer_card h2{
+    line-height: 0rem;
 }
 .footer_card p{
     line-height: 1.5rem;
@@ -42,6 +50,8 @@
     /* padding-bottom: .5  rem; */
     text-decoration: none;
     cursor: pointer;
+    line-height: 1.5rem;
+
 }
 .footer_center .footer_card a:hover{
     text-decoration: underline;
@@ -60,7 +70,10 @@
     text-decoration: underline;
     cursor: pointer;
 }
-.footer_card > h2, .footer_card > h4{
+.footer_card > h3{
+    line-height: 0rem;
+}
+.footer_card > h2, .footer_card > h3{
     text-align: justify;
     color: white;
 }
