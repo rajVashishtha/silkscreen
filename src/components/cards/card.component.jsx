@@ -2,6 +2,8 @@ import React from 'react'
 import './card.style.css'
 import OneCard from '../onecard/onecard.component'
 import $ from 'jquery'
+import {setCardsItem} from '../../redux/card/card.action'
+import {connect} from 'react-redux'
 
 import NewButton from '../material/button.component'
 
@@ -66,9 +68,14 @@ class Cards extends React.Component{
             }
         })
     }
+    componentDidMount(){
+        const {setCardsItem} = this.props
+        setCardsItem([1,2,3])
+    }
   
 
     render(){
+        
         return(
             <div className="main_body">
                 <h1>Featured Products</h1>
@@ -94,4 +101,11 @@ class Cards extends React.Component{
     }
 };
 
-export default Cards;
+
+const mapDispatchToProps = dispatch =>({
+    setCardsItem : card => dispatch(setCardsItem(card))
+  });
+const mapStateToProps = state =>({
+    card : state.cards.cards
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);

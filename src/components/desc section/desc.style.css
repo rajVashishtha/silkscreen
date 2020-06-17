@@ -1,0 +1,34 @@
+.desc{
+    margin-top: 2rem;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.desc .toogle_button button{
+    border: none;
+    background: none;
+    color: #7AAFF7;
+    cursor:pointer;
+    padding-bottom: .5rem;
+      font-size: 20px;
+      outline: none;
+}
+.desc .toogle_button button:first-child{
+    border-right: 1px solid #7AAFF7;
+    border-top: 1px solid #7AAFF7;
+    border-left: 1px solid #7AAFF7;
+}
+.desc .toogle_button button:last-child{
+    border-bottom: 1px solid #7AAFF7;
+    border-right: 1px solid #7AAFF7;
+    border-left: 1px solid #7AAFF7;
+    /* border-top: 3px solid white; */
+}
+.desc .toogle_spec{
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .desc{
+        width: 100%;
+    }
+}

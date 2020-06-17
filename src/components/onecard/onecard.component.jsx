@@ -1,27 +1,3 @@
-// import React from 'react'
-// import './onecard.style.css'
-
-// const OneCard = ({imageUrl,link, bannerName, bannerDesc}) =>{
-//     return(
-//         <div className="flip-card" style={{cursor: "pointer"}}>
-//             <a href={link}>
-//                 <div className="flip-card-inner">
-//                     <div className="flip-card-front">
-//                         <img src={process.env.PUBLIC_URL + imageUrl} alt="Avatar" />
-//                         <h3>{bannerName}</h3>
-//                     </div>
-//                     <div className="flip-card-back">
-//                         <h1>{bannerName}</h1> 
-//                         <p>{bannerDesc}</p> 
-//                     </div>
-//                 </div>
-//             </a>
-//         </div>
-//     )
-// }
-
-// export default OneCard
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -32,7 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 
 import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
-import $ from 'jquery'
 
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
@@ -53,9 +28,9 @@ media: {
   marginTop:'30'
 }
   };
-const showMsg= () =>{
-    $(".modal").fadeIn().fadeOut(1000)
-}
+// const showMsg= () =>{
+//     $(".modal").fadeIn().fadeOut(1000)
+// }
 const useStyles = makeStyles({
   root: {
     maxWidth: 400,
@@ -102,7 +77,7 @@ function OneCard({imageUrl,link, bannerName, bannerDesc, currentUser, match, his
       </CardActionArea>
       </MuiThemeProvider>
       <CardActions>
-        {
+        {/* {
           currentUser != null ? (<NewButton size="small"  variant="outlined" >
           Add to Cart
         </NewButton>) :
@@ -111,20 +86,11 @@ function OneCard({imageUrl,link, bannerName, bannerDesc, currentUser, match, his
           Add to Cart
         </NewButton>
         )
-        }
+        } */}
         
-        <NewButton size="small" variant="outlined" marginleft="1.5rem" onClick={()=>history.push(`${match.url}${link}`)}>
+        <NewButton size="small" variant="outlined" onClick={()=>history.push(`${match.url}${link}`)}>
           Learn More
         </NewButton>
-        <div className="modal">
-          <div className="modal-content">
-            <div className="modal-body">
-                <h2>Please Login First</h2>
-            </div>
-
-          </div>
-
-        </div>
       </CardActions>
     </Card>
   );

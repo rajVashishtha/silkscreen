@@ -1,0 +1,28 @@
+.product_center{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.address_div{
+    display: flex;
+    width:80%;
+        margin-left: auto;
+        margin-right: auto;
+    flex-direction: row;;
+    .address{
+        
+        color :#7AAFF7;
+        cursor:pointer;
+      &:hover{
+          color: black;
+      }  
+    }
+}
+
+@media screen and (max-width: 600px){
+    .product_center{
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,9 @@
+.image_section{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.image_section .image img{
+    max-height: 25rem;
+    max-width: 35rem;
+}

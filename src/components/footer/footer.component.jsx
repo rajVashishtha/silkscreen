@@ -15,9 +15,10 @@ const Footer = () =>{
                  }}>Why print here ?</h2>
                 <div className="footer_center">
                      <div className="footer_card" style={{
-                         marginTop:"0rem",
-                     }}>
-                        <h2>Always before time</h2>
+                         width:"80%"
+                     }} >
+                        <h2 
+                        >Always before time</h2>
                        
                         <p>We keep our work at highest priority and deliver it at an unconditionally pace with guareented best quality.</p>
                         
@@ -29,7 +30,9 @@ const Footer = () =>{
                        <p>Our Printers works on Green Tech INK Mechanism, that is our commitment to provide eco-friendly green Painting domains, We care for our green environment. </p>
                         
                     </div>
-                      <div className="footer_card">
+                      <div className="footer_card" style={{
+                          width:"70%"
+                      }}>
                         <h2>Our Commitment </h2>
                      
                        <p>We are famous because of our clients' satisfaction in our products and  our commitments made to them .</p>

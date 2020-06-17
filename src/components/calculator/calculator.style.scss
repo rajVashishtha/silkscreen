@@ -1,0 +1,191 @@
+.size_section{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    color: #7AAFF7;
+    background : white;
+    background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    color: #7AAFF7;
+    background: #7AAFF7;
+    overflow: hidden;
+    border-radius: .25em;
+    border: 1px solid #7AAFF7;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #7AAFF7;
+    cursor: pointer;
+    border: 1px solid #7AAFF7;
+  }
+  select:disabled{
+    background-color: #dddddd;
+    border: 1px solid #dddddd;
+    cursor: not-allowed;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #7AAFF7;
+    color: white;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: black;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+  label{
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family: 'Roboto Condensed', sans-serif;
+      /* font-family: 'Baloo Thambi 2', cursive; */
+  }
+  .input_field input{
+      width: 15.7em;
+      height: 2em;
+      padding: 0 .5em;
+      padding-left: 5px;
+      background-color: white ;
+      font-size: larger;
+      color: #7AAFF7;
+      border-radius: .25em;
+      border: 1px solid #7AAFF7;
+      line-height: 3;
+  }
+  .input_field input:focus{
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #7AAFF7;
+  }
+ .question_btn{
+  margin-left: .2em;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  font-size: larger;
+  height: 50px;
+  padding-bottom: 0rem;
+ }
+ .question_div{
+  position: absolute;
+  z-index: 99999;
+  margin-left: 2rem;
+  display: none;
+  border: 1px solid #7AAFF7;
+  color: #7AAFF7;
+  width: 70px;
+ 
+ }
+ .question_btn:hover{
+   color: #7AAFF7;
+ }
+ .question_btn:hover ~ .question_div{
+  display: block;
+}
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  display: inline;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+     padding-top: .5rem;
+  background-color: rgb(227, 231, 235);
+  color: rgb(12, 12, 12);
+}
+
+.modal-body {
+    background-color:white;
+    /* padding: 2px 9px; */
+  }
+  .description-box{
+    display: none;
+  }
+@media screen and (max-width: 600px){
+  .size_section{
+    width: 100%;
+  }
+  .select{
+    padding: none;
+    width: 15em !important;
+  }
+  select{
+    padding: none;
+  }
+}
+
+
+ 
