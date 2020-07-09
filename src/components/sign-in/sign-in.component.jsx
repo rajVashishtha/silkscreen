@@ -6,8 +6,6 @@ import {connect} from 'react-redux';
 import {setCurrentUser}  from '../../redux/user/user-action';
 
 
-
-
 import './sign-in.styles.scss';
 
 class SignIn extends React.Component {

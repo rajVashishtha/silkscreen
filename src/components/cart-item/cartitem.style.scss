@@ -1,0 +1,17 @@
+.main-forcartitem{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+        justify-content: space-around;
+        margin: 10px 10px;
+        
+        .forImage, .forName, .forQuantity, .forPrice{
+            text-align: center;
+            width: 15.5%;
+        }
+        .forRemove{
+            text-align: center;
+            width:13%
+        }
+        
+}

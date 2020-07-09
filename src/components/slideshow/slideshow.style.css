@@ -36,6 +36,7 @@
     width: 70%;
     
 }
+
 .slideshow .slidetext > button{
      margin-left: 1.2rem;
     height: 3.5rem;
@@ -48,16 +49,32 @@
   outline:none;
 }
 @media only screen and (max-width: 600px){
+    .slideshow_image{
+        width: 95%;
+        height: 60%;
+    }
+    .slideshow{
+        width: 95%;
+    }
     .slideshow .slidetext{
+        height: fit-content;
         flex-direction: column;
+        width: 100%;
+        padding-bottom: 1rem;
     }
     .slideshow .slidetext > h1{
-        width: auto;
         margin: none;
+        width: 100%;
+        font-size: 20px;
     }
     .slideshow .slidetext > button{
+        margin-top: 10px;
         margin-right: auto;
         margin-left: auto;
-        width: auto;
+        width: 10rem;
+        margin-left: auto;
+        height: 3rem;
+        margin-right: auto;
+        font-size: .8rem
     }
 }

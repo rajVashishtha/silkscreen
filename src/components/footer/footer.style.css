@@ -1,111 +1,125 @@
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@400&display=swap';
-.footer{
-    /* font-family: 'Montserrat', sans-serif; */
+@import "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@400&display=swap";
+.footer {
+  /* font-family: 'Montserrat', sans-serif; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #cecccc;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0rem;
+  font-size: 14px;
+  height: auto;
+  margin-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+.footer .footer_center {
+  display: flex;
+  justify-content: space-around;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.footer .footer_center_2 {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.footer_center .footer_card {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /*    height: 30rem;*/
+}
+.footer h2 {
+  line-height: 0rem;
+}
+.footer_card h2 {
+  line-height: 0rem;
+}
+.footer_card p {
+  line-height: 1.5rem;
+  text-align: justify;
+}
+.footer_card a {
+  display: block;
+  /* padding-top: .5rem; */
+  /* padding-bottom: .5  rem; */
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.5rem;
+}
+.footer_center .footer_card a:hover {
+  text-decoration: underline;
+}
+.footer_2 a {
+  cursor: inherit;
+  text-decoration: none;
+  color: black;
+}
+.footer_2 .footer_card a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: justify;
+}
+.footer_2 .footer_card #email_us:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer_card > h3 {
+  line-height: 0rem;
+}
+.footer_card > h2,
+.footer_card > h3 {
+  text-align: justify;
+  color: white;
+}
+#modal1 {
+  display: none;
+}
+#modal2 {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    background-color: #CECCCC;
+    background-color: #b1b5b1;
     width: 100%;
     margin-top: 0;
-    padding-top: 0rem;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 15px;
-    height: auto;
-    margin-top: 0.5rem;
-    padding-bottom: .5rem;
-}
-.footer .footer_center{
+    font-size: 12px;
+  }
+  .footer .footer_center {
     display: flex;
-    justify-content: space-around;
-    width: 88%;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+  }
 }
-.footer .footer_center_2{
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+.footer-address {
+  background: no-repeat;
+  color: white;
+  padding: 15px;
+  margin: 15px;
+  font-size: 14px;
 }
-.footer_center .footer_card{
-    
-    padding-left: 2rem;
-    padding-right: 2rem;
-/*    height: 30rem;*/
+.footer .MuiPaper-root {
+  /* color: white; */
+  background: none;
+  box-shadow: none;
 }
-.footer h2{
-    line-height: 0rem;
+.footer .MuiFormControl-root {
+  width: 90%;
 }
-.footer_card h2{
-    line-height: 0rem;
-}
-.footer_card p{
-    line-height: 1.5rem;
-    text-align: justify;
-}
-.footer_card a{
-    display: block;
-    /* padding-top: .5rem; */
-    /* padding-bottom: .5  rem; */
-    text-decoration: none;
-    cursor: pointer;
-    line-height: 1.5rem;
-
-}
-.footer_center .footer_card a:hover{
-    text-decoration: underline;
-}
-.footer_2 a{
-    cursor: inherit;
-    text-decoration: none;
-    color: black;
-}
-.footer_2 .footer_card a:hover{
-    text-decoration: underline;
-    cursor: pointer;
-    text-align: justify;
-}
-.footer_2 .footer_card #email_us:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-.footer_card > h3{
-    line-height: 0rem;
-}
-.footer_card > h2, .footer_card > h3{
-    text-align: justify;
-    color: white;
-}
-#modal1{
-    display: none;
-}
-#modal2{
-    display: block;
-}
-
-
-@media screen and (max-width: 600px){
-    .footer{
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        background-color: #B1B5B1;
-        width: 100%;
-        margin-top: 0;
-        font-family: 'Roboto Slab', serif;
-        font-size: 10px;
-    }
-    .footer .footer_center{
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 1rem;
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-        overflow: hidden;
-    }
+.footer .MuiTextField-root:nth-child(2), .footer .MuiTextField-root:nth-child(3){
+    margin-top: 20px;
 }

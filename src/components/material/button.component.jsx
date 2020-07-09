@@ -1,10 +1,9 @@
 import Button from '@material-ui/core/Button'
 import React from 'react'
-// import { withStyles } from '@material-ui/core';
 
 
 const NewButton = ({children, ...props}) =>{
-  const {variant, marginleft, disabled} = props
+  const {variant, marginleft, disabled,parentStyle} = props
   const style  = variant === "contained" ? {
     backgroundColor:"#7AAFF7",
     color:"white",
@@ -16,7 +15,7 @@ const NewButton = ({children, ...props}) =>{
     marginLeft : marginleft !== undefined ? marginleft : "none",
 };
     return(
-        <Button style={style} {...props}
+        <Button style={parentStyle !== undefined ? parentStyle : style} {...props}
         disabled={disabled}
         variant={variant}
         >{children}</Button>

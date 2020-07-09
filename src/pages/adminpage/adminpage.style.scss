@@ -1,0 +1,27 @@
+
+.product_cards_div{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: auto;
+    flex-flow: wrap;
+    margin-right: auto;
+
+    .remove_add_div{
+        margin-top: 35px;
+        display: flex;
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.mdb_modal_body{
+    width: 80%;
+    padding-left: 10px;
+}
+.left_over_div{
+    padding-top: 20px;
+    margin-left: 180px;
+    margin-bottom: 40px;
+}

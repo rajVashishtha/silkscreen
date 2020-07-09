@@ -3,7 +3,10 @@ import './calculator.style.scss'
 import NewButton from '../material/button.component'
 import './calculator.util'
 import $ from 'jquery'
+import setCartItem from '../../redux/cart/cart.action'
+import { connect } from 'react-redux'
 class Calculator extends React.Component {
+
     state = {
         frame: "disabled",
         standee: "disabled",
@@ -71,6 +74,11 @@ class Calculator extends React.Component {
             glowsign: target.id === "glowsign" ? "enabled" : "disabled",
         })
         $("#frame-select, #standee-select, #glowsign-select").val("no")
+    };
+
+    addToCart = () =>{
+        const {setCartItem} = this.props
+        setCartItem(["1","2"])
     }
 
 
@@ -179,9 +187,6 @@ class Calculator extends React.Component {
 
                     </div>
                     <br />
-
-
-
 
                     <div style={{
                         display: "flex",
@@ -364,7 +369,7 @@ class Calculator extends React.Component {
                         <NewButton variant="contained" onClick={this.changeAddDesign}
                         id="add-design"
                         >Add design</NewButton>
-                        <NewButton variant="contained" >Submit</NewButton>
+                        <NewButton variant="contained" onClick={this.addToCart} >Submit</NewButton>
                     </div>
                         {
 
@@ -450,4 +455,8 @@ class Calculator extends React.Component {
     }
 };
 
-export default Calculator
+const mapDispatchToProps = dispatch =>({
+    setCartItem: user => dispatch(setCartItem(user))
+  })
+
+export default connect(null, mapDispatchToProps)(Calculator)

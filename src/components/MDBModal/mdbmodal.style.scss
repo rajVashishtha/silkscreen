@@ -1,0 +1,18 @@
+.mdb_modal{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.mdb_modal_footer{
+    display: flex;
+    width: auto;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding-bottom: 10px;
+
+    &:last-child{
+        margin-right: 10px;
+    }
+   
+}
