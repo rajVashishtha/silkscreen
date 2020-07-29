@@ -121,9 +121,9 @@ const Footer = () => {
                   action="/action_page.php"
                   target="_blank"
                 >
-                  <TextField id="standard-basic" label="Name" />
-                  <TextField id="standard-basic" label="Email" type="email" />
-                  <TextField id="standard-basic" label="Message" multiline={true} />
+                  <TextField id="complaint-name" label="Name" />
+                  <TextField id="complaint-email" label="Email" type="email" />
+                  <TextField id="complaint-message" label="Message" multiline={true} />
 
                   <div style={{ textAlign: "left", marginTop: "10px" }}>
                     <Button variant="contained" color="primary">
